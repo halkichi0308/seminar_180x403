@@ -1,0 +1,17 @@
+version: '2'
+services:
+  # php
+  php:
+    build: .
+    volumes:
+      - ./html:/var/www/html
+    ports:
+      - '80:80'
+    links:
+      - mysql-server
+  # DB
+  mysql-server:
+    container_name: "mysql-server"
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: pass

