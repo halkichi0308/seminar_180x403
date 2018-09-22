@@ -88,10 +88,9 @@
   </style>
   </head>
   <body>
+    <a href="/">←TOPへ戻る</a>
     <div id="container">
-
       <h1>XSS</h1>
-
       <form id="form1" action="<?php echo $FileName;?>" method="post">
         <label>The first:</label>
         <?php

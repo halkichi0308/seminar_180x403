@@ -95,11 +95,13 @@ if(isset($_SESSION['err'])){
             <title>ログイン</title>
     </head>
     <body>
+        <a href="/">←TOPへ戻る</a>
         <h1>ログイン画面</h1>
         <form id="loginForm" name="loginForm" action="#" method="POST">
             <fieldset>
                 <legend>ログインフォーム</legend>
-                <div><font color="#ff0000">
+                <div>
+                  <font color="#ff0000">
                   <?php echo $errFlg <= 3 ? htmlspecialchars($errorMessage, ENT_QUOTES) :''; ?></font>
                 </div>
                 <label for="userid">ユーザーID</label><input type="text" id="userid" name="userid" placeholder="ユーザーIDを入力" value="<?php echo !empty($_POST["userid"]) ? htmlspecialchars($_POST["userid"], ENT_QUOTES):'';?>">

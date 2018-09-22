@@ -1,5 +1,5 @@
 <?php
-require('./function.php');
+require('../xss/function.php');
 
 if(HasSid() === true){
 
